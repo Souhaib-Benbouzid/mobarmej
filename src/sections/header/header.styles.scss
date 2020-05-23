@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+
+  .options {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+}
