@@ -1,11 +1,13 @@
 import React from "react";
 import "./header.styles.scss";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <div className="logo">Mobarmij</div>
+      <Link to="/" className="logo">
+        Mobarmij
+      </Link>
       <div className="options">
         <Link to="/about" className="option">
           About
@@ -16,6 +18,7 @@ const Header = () => {
         <Link to="/contact" className="option">
           Contact
         </Link>
+        <Redirect to="/" />
       </div>
     </div>
   );
