@@ -1,5 +1,7 @@
+@import "./styleGuide/variables.scss";
+
 body {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: $font-family;
 }
 
 a {
