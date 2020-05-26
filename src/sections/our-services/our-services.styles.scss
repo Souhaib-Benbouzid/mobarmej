@@ -1,0 +1,63 @@
+.our-services {
+  padding-top: 7%;
+  margin-bottom: 15%;
+  .description {
+    padding-left: 13%;
+
+    .services-title {
+      color: rgb(32, 32, 32);
+      font-weight: 300;
+      font-size: 30px;
+      margin-bottom: 5%;
+      .services-emphasis {
+        color: #335eea;
+        font-weight: 400;
+      }
+    }
+    .services-list {
+      color: #869ab8;
+      line-height: 30.4px;
+      font-size: 1rem;
+      margin-bottom: 5%;
+      list-style: none;
+      padding-left: 0;
+    }
+    @media screen and (max-width: 1024px) {
+      .description {
+        padding-top: 0%;
+
+        .services-title {
+          font-size: 25px;
+        }
+        .services-list {
+          font-size: 0.9rem;
+        }
+      }
+      .image {
+        max-height: 50%;
+      }
+    }
+    @media screen and (max-width: 780px) {
+      .image {
+        padding: 4% 0%;
+        display: block;
+        margin: auto;
+        height: 50%;
+        width: 50%;
+      }
+      .description {
+        padding-top: 0%;
+
+        .services-title {
+          font-size: 25px;
+          .services-emphasis {
+            font-weight: 400;
+          }
+        }
+        .services-list {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

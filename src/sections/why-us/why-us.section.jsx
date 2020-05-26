@@ -1,11 +1,11 @@
 import React from "react";
 import { Col, Row, Container } from "reactstrap";
-import "./what-we-do.styles.scss";
+import "./why-us.styles.scss";
 
-const WhatWeDo = () => {
+const WhyUs = () => {
   return (
     <Container>
-      <Row className="what-we-do-section border-bottom">
+      <Row className="why-us border-bottom">
         <Col sm="12" md="4" className="card">
           <i className="icofont-dashboard-web icofont"></i>
           <h6>All kinds of apps</h6>
@@ -35,4 +35,4 @@ const WhatWeDo = () => {
   );
 };
 
-export default WhatWeDo;
+export default WhyUs;

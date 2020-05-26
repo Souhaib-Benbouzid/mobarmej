@@ -1,9 +1,18 @@
-.what-we-do-section {
+.why-us {
   padding-bottom: 10%;
   .card {
     height: 178px;
     width: 100%;
     border: none;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 5px solid #335eea;
+      border-right: 4px solid #335eea;
+      .icofont {
+        color: #335eea;
+      }
+    }
     .icofont {
       height: 50px;
       font-size: 50px;
@@ -13,6 +22,11 @@
     .description {
       color: #869ab8;
       width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+      text-align: center;
     }
   }
 }
