@@ -6,20 +6,20 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
-      <div class="copyright">
+      <div className="copyright">
         <p>&copy 2020 - Mobarmij</p>
       </div>
-      <div class="social">
-        <Link to="#" class="support">
+      <div className="social">
+        <Link to="#" className="support">
           Contact Us
         </Link>
-        <Link to="#" class="support">
+        <Link to="#" className="support">
           Facebook
         </Link>
-        <Link to="#" class="support">
+        <Link to="#" className="support">
           Instagram
         </Link>
-        <Link to="#" class="support">
+        <Link to="#" className="support">
           Twitter
         </Link>
       </div>

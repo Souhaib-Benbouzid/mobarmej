@@ -1,12 +1,15 @@
 body {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0px;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
-.section {
-  padding: 3% 0%;
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 950px;
+  }
 }

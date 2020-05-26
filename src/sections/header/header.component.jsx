@@ -1,24 +1,54 @@
 import React from "react";
 import "./header.styles.scss";
-import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { toggleNav } from "../../redux/navigation/nav-actions";
+import { navStateSelector } from "../../redux/navigation/nav-selectors";
 
-const Header = () => {
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+} from "reactstrap";
+
+const Header = ({ toggle, isOpen }) => {
   return (
-    <div className="header">
-      <div className="logo">Mobarmij</div>
-      <div className="options">
-        <Link to="/about" className="option">
-          About
-        </Link>
-        <Link to="/story" className="option">
-          Story
-        </Link>
-        <Link to="/contact" className="option">
-          Contact
-        </Link>
-      </div>
-    </div>
+    <Container className="header">
+      <Navbar light expand="md">
+        <NavbarBrand href="/">Mobarmij.</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <button className="close-nav" onClick={toggle}>
+              <i class="fas fa-times"></i>
+            </button>
+            <NavItem>
+              <NavLink href="#">Services</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Contact</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </Container>
   );
 };
 
-export default Header;
+const mapStateToProps = createStructuredSelector({
+  isOpen: navStateSelector,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  toggle: () => dispatch(toggleNav()),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
