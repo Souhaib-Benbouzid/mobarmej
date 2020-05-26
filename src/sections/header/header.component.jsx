@@ -26,7 +26,7 @@ const Header = ({ toggle, isOpen }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <button className="close-nav" onClick={toggle}>
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
             </button>
             <NavItem>
               <NavLink href="#">Services</NavLink>

@@ -1,12 +1,18 @@
-.card {
-  padding: 5%;
-  margin: auto;
-}
-
 .what-we-do-section {
-  margin: 4%;
-  .title {
-    text-align: center;
-    margin-bottom: 3%;
+  padding-bottom: 10%;
+  .card {
+    height: 178px;
+    width: 100%;
+    border: none;
+    .icofont {
+      height: 50px;
+      font-size: 50px;
+      color: #869ab8;
+      margin-bottom: 14px;
+    }
+    .description {
+      color: #869ab8;
+      width: 100%;
+    }
   }
 }

@@ -1,35 +1,37 @@
 import React from "react";
-import { Col, Row } from "reactstrap";
+import { Col, Row, Container } from "reactstrap";
 import "./what-we-do.styles.scss";
 
 const WhatWeDo = () => {
   return (
-    <div className="what-we-do-section ">
-      <h1 className="title">What we do </h1>
-      <Row>
-        <Col md="3" className="card">
-          <h1>websites</h1>
-          <p>
+    <Container>
+      <Row className="what-we-do-section border-bottom">
+        <Col sm="12" md="4" className="card">
+          <i className="icofont-dashboard-web icofont"></i>
+          <h6>All kinds of apps</h6>
+          <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque ultricies neque quis ipsum aliquam, vel.
+            Pellentesque.
           </p>
         </Col>
-        <Col md="3" className="card">
-          <h1>websites</h1>
-          <p>
+        <Col sm="12" md="4" className="card">
+          <i className="icofont-live-support icofont"></i>
+          <h6>After delivery support</h6>
+          <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque ultricies neque quis ipsum aliquam, vel.
+            Pellentesque.
           </p>
         </Col>
-        <Col md="3" className="card">
-          <h1>websites</h1>
-          <p>
+        <Col sm="12" md="4" className="card">
+          <i className="icofont-search-stock icofont"></i>
+          <h6>Business oriented products</h6>
+          <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque ultricies neque quis ipsum aliquam, vel.
+            Pellentesque.
           </p>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 
