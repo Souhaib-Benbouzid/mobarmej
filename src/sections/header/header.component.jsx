@@ -30,7 +30,7 @@ const Header = ({ navItems }) => {
   const navToggle = () => {
     isOpen ? setOpen(false) : setOpen(true);
   };
-
+  console.log();
   return (
     <Container className="header">
       <Navbar light expand="lg">
@@ -39,7 +39,7 @@ const Header = ({ navItems }) => {
 
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            {data.navItems.map((navItem, i) => {
+            {navItems.map((navItem, i) => {
               return (
                 <NavItem key={navItem.id}>
                   <NavLink href={navItem.href}>{navItem.name}</NavLink>
