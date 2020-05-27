@@ -1,6 +1,7 @@
 .hero {
   padding-top: 7%;
   margin-bottom: 15%;
+
   .cta {
     padding-top: 8%;
 
@@ -35,7 +36,11 @@
   }
   @media screen and (max-width: 780px) {
     .image {
-      padding: 9%;
+      padding: 4% 0%;
+      display: block;
+      margin: auto;
+      height: 50%;
+      width: 70%;
     }
     .cta {
       text-align: center;

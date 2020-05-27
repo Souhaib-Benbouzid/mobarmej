@@ -11,7 +11,7 @@ const Hero = () => {
         <Col sm="12" md="6" className="  order-md-2  image">
           <img
             src={require("../../assets/img/hero.PNG")}
-            className="img-fluid"
+            className="img-fluid img-rounded"
             alt=""
           />
         </Col>
@@ -25,7 +25,7 @@ const Hero = () => {
             app or mobile app, we make your dreams app come alive
           </p>
           <CustomButton>
-            Hire us <i class="fas fa-long-arrow-alt-right"></i>
+            Hire us <i className="fas fa-long-arrow-alt-right"></i>
           </CustomButton>
           <CustomButton off>See Work</CustomButton>
         </Col>
