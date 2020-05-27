@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.styles.scss";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { toggleNav } from "../../redux/navigation/nav-actions";
-import { navStateSelector } from "../../redux/navigation/nav-selectors";
 
 import {
   Collapse,
@@ -16,24 +14,38 @@ import {
   Container,
 } from "reactstrap";
 
-const Header = ({ toggle, isOpen }) => {
+// props
+
+const data = {
+  navItems: [
+    { id: 1, name: "About", href: "/about" },
+    { id: 2, name: "Contact", href: "/contact" },
+    { id: 3, name: "Services", href: "/services" },
+  ],
+};
+
+const Header = ({ navItems }) => {
+  // navbar toggler
+  const [isOpen, setOpen] = useState(false);
+  const navToggle = () => {
+    isOpen ? setOpen(false) : setOpen(true);
+  };
+
   return (
     <Container className="header">
-      <Navbar light expand="md">
+      <Navbar light expand="lg">
         <NavbarBrand href="/">Mobarmij.</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler onClick={navToggle} />
 
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="#">Services</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#">About</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#">Contact</NavLink>
-            </NavItem>
+            {data.navItems.map((navItem, i) => {
+              return (
+                <NavItem key={navItem.id}>
+                  <NavLink href={navItem.href}>{navItem.name}</NavLink>
+                </NavItem>
+              );
+            })}
           </Nav>
         </Collapse>
       </Navbar>
@@ -41,11 +53,9 @@ const Header = ({ toggle, isOpen }) => {
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  isOpen: navStateSelector,
+const mapStateToProps = (state, ownProps) => ({
+  navItems: state.navReducer.navItems,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  toggle: () => dispatch(toggleNav()),
-});
+const mapDispatchToProps = (dispatch) => ({});
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

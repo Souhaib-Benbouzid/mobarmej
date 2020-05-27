@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import navReducer from "./navigation/nav-reducer";
+import navReducer from "./navigation/navReducer";
 
 const persistConfig = {
   key: "root",
@@ -11,7 +11,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  nav: navReducer,
+  navReducer,
 });
 
 export const persistedReducer = persistReducer(persistConfig, rootReducer);
