@@ -1,12 +1,61 @@
 .hero {
-  height: 90vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url("https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?cs=srgb&dl=adulte-bureau-chaise-citadin-380769.jpg&fm=jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
+  padding-top: 7%;
+  margin-bottom: 15%;
+
+  .cta {
+    padding-top: 8%;
+
+    .welcome-title {
+      color: rgb(32, 32, 32);
+      font-weight: 300;
+      font-size: 35px;
+      margin-bottom: 5%;
+      .mobarmij {
+        color: #335eea;
+        font-weight: 400;
+      }
+    }
+    .welcome-description {
+      color: #869ab8;
+      line-height: 30.4px;
+      font-size: 1.1rem;
+      margin-bottom: 5%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .cta {
+      padding-top: 0%;
+
+      .welcome-title {
+        font-size: 30px;
+      }
+      .welcome-description {
+        font-size: 1rem;
+      }
+    }
+  }
+  @media screen and (max-width: 780px) {
+    .image {
+      padding: 4% 0%;
+      display: block;
+      margin: auto;
+      height: 50%;
+      width: 70%;
+    }
+    .cta {
+      text-align: center;
+      padding-top: 0%;
+
+      .welcome-title {
+        font-size: 30px;
+        .mobarmij {
+          font-weight: 400;
+        }
+      }
+      .welcome-description {
+        line-height: 30.4px;
+        font-size: 1rem;
+      }
+    }
+  }
 }

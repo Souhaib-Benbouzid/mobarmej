@@ -1,0 +1,17 @@
+@import "./styleGuide/variables.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 950px;
+  }
+}
