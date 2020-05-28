@@ -1,48 +1,127 @@
 @import "../../styleGuide/variables.scss";
-.header {
-  .navbar {
-    width: 100%;
-    padding: 8px 0px;
-  }
-  .navbar-brand {
-    font-size: 1.3rem;
-    color: $primary-color;
-    font-weight: bolder;
-  }
-  .navbar-nav {
-    flex-direction: row;
-    justify-content: space-around;
-    height: 30%;
-    width: 30%;
-    margin-left: auto;
-    z-index: 5;
-  }
-  .nav-link {
-    color: $secondary-color !important;
-    line-height: 8px;
+
+header {
+  width: 100%;
+  min-height: 5vh;
+  // position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  //  main items
+  .logo {
+    color: $bg-color;
+    max-width: 20%;
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-decoration: none;
   }
 
-  .navbar-toggler {
-    border: none;
-    &:focus {
-      outline: none;
+  .burger {
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .nav {
+    a {
+      color: $primary-color;
+      min-width: 100px;
+      text-align: center;
+      text-decoration: none;
+      padding: 7px;
+      font-weight: 400;
     }
   }
-  @media screen and (max-width: $screen-sm) {
-    .navbar-nav {
-      padding: 15%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      height: 50vh;
+
+  // decoration
+  .toggle-button {
+    width: 30px;
+    height: 4px;
+    background-color: $primary-color;
+    position: relative;
+    top: 0;
+
+    &::after {
+      content: "";
+      height: 4px;
+      border-radius: 30px;
+      top: -7px;
       width: 100%;
-      background-color: $bg-color;
-      position: fixed;
-      right: 0;
+      background-color: $primary-color;
+      position: absolute;
     }
-    .nav-link {
-      margin: 15% auto;
+
+    &::before {
+      content: "";
+      height: 4px;
+      border-radius: 30px;
+      top: 7px;
+      width: 100%;
+      background-color: $primary-color;
+      position: absolute;
     }
+  }
+
+  .open {
+    animation: scaleup 0.5s forwards;
+  }
+}
+
+@keyframes scaleup {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: $screen-md) {
+  header {
+    padding: 5% 10%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 15px;
+    right: 0;
+    z-index: 5;
+    background-color: rgba($color: #fff, $alpha: 1);
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    transform-origin: top;
+  }
+}
+
+@media only screen and (min-width: $screen-md) {
+  header {
+    padding: 1% 10%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 60%;
+    padding: 10px;
+    z-index: 5;
+    position: initial;
+    opacity: 1;
+    flex-wrap: wrap;
+  }
+
+  .toggle-button {
+    display: none;
   }
 }

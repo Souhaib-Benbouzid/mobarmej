@@ -2,45 +2,29 @@ import React, { useState } from "react";
 import "./header.styles.scss";
 import { connect } from "react-redux";
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-} from "reactstrap";
-
-// props
-
 const Header = ({ navItems }) => {
-  // navbar toggler
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState("");
   const navToggle = () => {
-    isOpen ? setOpen(false) : setOpen(true);
+    isOpen === "" ? setOpen("open") : setOpen("");
   };
-
   return (
-    <Container className="header">
-      <Navbar light expand="lg">
-        <NavbarBrand href="/">Mobarmij.</NavbarBrand>
-        <NavbarToggler onClick={navToggle} />
-
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            {navItems.map((navItem, i) => {
-              return (
-                <NavItem key={navItem.id}>
-                  <NavLink href={navItem.href}>{navItem.name}</NavLink>
-                </NavItem>
-              );
-            })}
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </Container>
+    <header>
+      <a className="logo" href="/">
+        Mobarmij.
+      </a>
+      <div className="burger" onClick={navToggle}>
+        <div className="toggle-button" />
+      </div>
+      <nav className={`nav ${isOpen}`}>
+        {navItems.map((navItem, i) => {
+          return (
+            <a key={navItem.id} href={navItem.href}>
+              {navItem.name}
+            </a>
+          );
+        })}
+      </nav>
+    </header>
   );
 };
 
