@@ -7,7 +7,7 @@ import { Container, Row, Col } from "reactstrap";
 const Hero = () => {
   return (
     <Container>
-      <Row className="hero">
+      <Row className="hero" id="sectionOne">
         <Col sm="12" md="6" className="  order-md-2  image">
           <img
             src={require("../../assets/img/hero.PNG")}

@@ -1,3 +1,5 @@
+@import "../../styleGuide/variables.scss";
+
 header {
   width: 100%;
   min-height: 5vh;
@@ -9,13 +11,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 10%;
   position: relative;
 
   //  main items
   .logo {
-    color: black;
-    width: 39vw;
+    color: $bg-color;
+    max-width: 20%;
     font-weight: normal;
     font-size: 1.2rem;
     text-decoration: none;
@@ -28,19 +29,9 @@ header {
   }
 
   .nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 15px;
-    right: 0;
-    z-index: 5;
-    background-color: rgba($color: white, $alpha: 1);
-
     a {
-      color: #506eac;
-      min-width: 150px;
+      color: $primary-color;
+      min-width: 100px;
       text-align: center;
       text-decoration: none;
       padding: 7px;
@@ -52,7 +43,7 @@ header {
   .toggle-button {
     width: 30px;
     height: 4px;
-    background-color: blue;
+    background-color: $primary-color;
     position: relative;
     top: 0;
 
@@ -62,7 +53,7 @@ header {
       border-radius: 30px;
       top: -7px;
       width: 100%;
-      background-color: blue;
+      background-color: $primary-color;
       position: absolute;
     }
 
@@ -72,64 +63,65 @@ header {
       border-radius: 30px;
       top: 7px;
       width: 100%;
-      background-color: blue;
+      background-color: $primary-color;
       position: absolute;
     }
   }
 
   .open {
-    display: flex;
-    position: absolute;
-    top: 100%;
+    animation: scaleup 0.5s forwards;
   }
 }
 
-// .header {
-//   .navbar {
-//     width: 100%;
-//     position: fixed;
-//     z-index: 5;
-//     top: 0;
-//     right: 0;
-//     padding: 0;
-//   }
-//   .navbar-brand {
-//     font-size: 1.3rem;
-//     color: #335eea;
-//     font-weight: bolder;
-//   }
-//   .navbar-nav {
-//     flex-direction: row;
-//     justify-content: space-around;
-//     height: 30%;
-//     width: 30%;
-//     margin-left: auto;
-//   }
-//   .nav-link {
-//     color: #506eac !important;
-//     line-height: 8px;
-//   }
+@keyframes scaleup {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: $screen-md) {
+  header {
+    padding: 5% 10%;
+  }
 
-//   .navbar-toggler {
-//     border: none;
-//     &:focus {
-//       outline: none;
-//     }
-//   }
-//   @media screen and (max-width: 760px) {
-//     .navbar-nav {
-//       padding: 15%;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: flex-start;
-//       align-items: center;
-//       height: 50vh;
-//       width: 100%;
-//       background-color: white;
-//       right: 0;
-//     }
-//     .nav-link {
-//       margin: 15% auto;
-//     }
-//   }
-// }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 15px;
+    right: 0;
+    z-index: 5;
+    background-color: rgba($color: #fff, $alpha: 1);
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    transform-origin: top;
+  }
+}
+
+@media only screen and (min-width: $screen-md) {
+  header {
+    padding: 1% 10%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 60%;
+    padding: 10px;
+    z-index: 5;
+    position: initial;
+    opacity: 1;
+    flex-wrap: wrap;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+}

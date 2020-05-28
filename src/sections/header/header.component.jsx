@@ -3,7 +3,6 @@ import "./header.styles.scss";
 import { connect } from "react-redux";
 
 const Header = ({ navItems }) => {
-  // navbar toggler
   const [isOpen, setOpen] = useState("");
   const navToggle = () => {
     isOpen === "" ? setOpen("open") : setOpen("");
