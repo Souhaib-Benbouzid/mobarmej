@@ -1,63 +1,78 @@
+@import "../../styleGuide/variables.scss";
 .our-services {
-  padding-top: 7%;
+  padding-top: 8%;
   margin-bottom: 15%;
+  display: flex;
   .description {
     padding-left: 13%;
-
+    width: 600px;
     .services-title {
       color: rgb(32, 32, 32);
       font-weight: 300;
       font-size: 30px;
       margin-bottom: 5%;
       .services-emphasis {
-        color: #335eea;
+        color: $primary-color;
         font-weight: 400;
       }
     }
     .services-list {
-      color: #869ab8;
+      color: $secondary-color;
       line-height: 30.4px;
       font-size: 1rem;
       margin-bottom: 5%;
       list-style: none;
       padding-left: 0;
     }
-    @media screen and (max-width: 1024px) {
-      .description {
-        padding-top: 0%;
+  }
+  .image {
+    width: 600px;
+  }
+}
+@media screen and (max-width: $screen-lg) {
+  .description {
+    padding-top: 0%;
 
-        .services-title {
-          font-size: 25px;
-        }
-        .services-list {
-          font-size: 0.9rem;
-        }
-      }
-      .image {
-        max-height: 50%;
+    .services-title {
+      font-size: 25px;
+    }
+    .services-list {
+      font-size: 0.9rem;
+    }
+  }
+  .image {
+    max-height: 50%;
+  }
+}
+@media screen and (max-width: $screen-md) {
+  .our-services {
+    flex-direction: column;
+    align-items: center;
+    image {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .image {
+    padding: 4% 0%;
+    display: block;
+    margin: auto;
+    height: 50%;
+    width: 50%;
+  }
+  .description {
+    padding-top: 0%;
+
+    .services-title {
+      font-size: 25px;
+      .services-emphasis {
+        font-weight: 400;
       }
     }
-    @media screen and (max-width: 780px) {
-      .image {
-        padding: 4% 0%;
-        display: block;
-        margin: auto;
-        height: 50%;
-        width: 50%;
-      }
-      .description {
-        padding-top: 0%;
-
-        .services-title {
-          font-size: 25px;
-          .services-emphasis {
-            font-weight: 400;
-          }
-        }
-        .services-list {
-          font-size: 1rem;
-        }
-      }
+    .services-list {
+      font-size: 1rem;
     }
   }
 }
