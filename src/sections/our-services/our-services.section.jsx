@@ -1,11 +1,11 @@
 import React from "react";
-import { Col, Row } from "reactstrap";
+
 import "./our-services.styles.scss";
 
 const OurServices = () => {
   return (
-    <Row className="our-services border-bottom">
-      <Col sm="12" md="6" className="description">
+    <div className="our-services border-bottom">
+      <div className="description col">
         <h1 className="services-title">
           We have great experience <br />{" "}
           <span className="services-emphasis">
@@ -21,15 +21,15 @@ const OurServices = () => {
           <li>Branding</li>
           <li>Online marketing</li>
         </ul>
-      </Col>
-      <Col sm="12" md="6" className="image">
+      </div>
+      <div className="image col">
         <img
           src={require("../../assets/img/dashboard.PNG")}
           className="img-fluid img-rounded"
           alt=""
         />
-      </Col>
-    </Row>
+      </div>
+    </div>
   );
 };
 

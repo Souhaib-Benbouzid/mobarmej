@@ -1,0 +1,32 @@
+@import "../../styleGuide/variables.scss";
+.card {
+  height: 250px;
+  width: 250px;
+  margin-right: 2%;
+  margin-bottom: 5%;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 5px solid $primary-color;
+    border-right: 4px solid $primary-color;
+    .icofont {
+      color: $primary-color;
+    }
+  }
+  .icofont {
+    height: 50px;
+    font-size: 50px;
+    color: $secondary-color;
+    margin-bottom: 14px;
+  }
+  .description {
+    color: $secondary-color;
+    width: 100%;
+  }
+}
+@media screen and (max-width: $screen-sm) {
+  .card {
+    text-align: center;
+  }
+}

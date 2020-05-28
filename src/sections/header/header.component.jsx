@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./header.styles.scss";
 import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
 
 import {
   Collapse,
@@ -15,14 +14,6 @@ import {
 } from "reactstrap";
 
 // props
-
-const data = {
-  navItems: [
-    { id: 1, name: "About", href: "/about" },
-    { id: 2, name: "Contact", href: "/contact" },
-    { id: 3, name: "Services", href: "/services" },
-  ],
-};
 
 const Header = ({ navItems }) => {
   // navbar toggler
@@ -39,7 +30,7 @@ const Header = ({ navItems }) => {
 
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            {data.navItems.map((navItem, i) => {
+            {navItems.map((navItem, i) => {
               return (
                 <NavItem key={navItem.id}>
                   <NavLink href={navItem.href}>{navItem.name}</NavLink>
@@ -57,5 +48,4 @@ const mapStateToProps = (state, ownProps) => ({
   navItems: state.navReducer.navItems,
 });
 
-const mapDispatchToProps = (dispatch) => ({});
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps)(Header);
