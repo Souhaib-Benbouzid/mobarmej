@@ -7,11 +7,26 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
 }
 
-@media screen and (min-width: 1024px) {
+.container {
+  max-width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: $screen-md) {
+  /*breakpoint*/
   .container {
-    max-width: 950px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.col {
+  flex: 1; /*grow*/
+}
+@media screen and (min-width: $screen-lg) {
+  .container {
+    max-width: 1024px;
   }
 }

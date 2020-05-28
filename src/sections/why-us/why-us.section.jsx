@@ -1,38 +1,23 @@
 import React from "react";
-import { Col, Row, Container } from "reactstrap";
+import { createStructuredSelector } from "reselect";
+import { featuresSelectorAsArray } from "../../redux/features/featuresSelectors";
+import { connect } from "react-redux";
+
 import "./why-us.styles.scss";
 
-const WhyUs = () => {
+import FeaturesCard from "../../components/features-card/featuresCard.component";
+
+const WhyUs = ({ features }) => {
   return (
-    <Container>
-      <Row className="why-us border-bottom">
-        <Col sm="12" md="4" className="card">
-          <i className="icofont-dashboard-web icofont"></i>
-          <h6>All kinds of apps</h6>
-          <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque.
-          </p>
-        </Col>
-        <Col sm="12" md="4" className="card">
-          <i className="icofont-live-support icofont"></i>
-          <h6>After delivery support</h6>
-          <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque.
-          </p>
-        </Col>
-        <Col sm="12" md="4" className="card">
-          <i className="icofont-search-stock icofont"></i>
-          <h6>Business oriented products</h6>
-          <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque.
-          </p>
-        </Col>
-      </Row>
-    </Container>
+    <div className="container">
+      {features.map(({ id, ...otherProps }) => (
+        <FeaturesCard key={id} {...otherProps} />
+      ))}
+    </div>
   );
 };
 
-export default WhyUs;
+const mapStateToProps = createStructuredSelector({
+  features: featuresSelectorAsArray,
+});
+export default connect(mapStateToProps)(WhyUs);

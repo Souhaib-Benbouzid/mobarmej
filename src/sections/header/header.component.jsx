@@ -32,5 +32,4 @@ const mapStateToProps = (state, ownProps) => ({
   navItems: state.navReducer.navItems,
 });
 
-const mapDispatchToProps = (dispatch) => ({});
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps)(Header);
