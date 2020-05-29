@@ -7,11 +7,12 @@ import "./homepage.styles.scss";
 
 const HomePage = () => {
   return (
-    <div className="homepage">
+    <React.Fragment>
       <Hero />
       <WhyUs />
+
       <OurServices />
-    </div>
+    </React.Fragment>
   );
 };
 

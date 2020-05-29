@@ -8,8 +8,8 @@ const FeaturesCard = (props) => {
   return (
     <div className="card col">
       <FeaturesIcon icon={icon} />
-      <h6>{title}</h6>
-      <p className="description">{description}</p>
+      <h6 className="feature-title">{title}</h6>
+      <p className="feature-description">{description}</p>
     </div>
   );
 };

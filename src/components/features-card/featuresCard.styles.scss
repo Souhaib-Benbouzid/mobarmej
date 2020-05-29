@@ -1,15 +1,13 @@
 @import "../../styleGuide/variables.scss";
 .card {
   height: 250px;
-  width: 250px;
-  margin-right: 2%;
-  margin-bottom: 5%;
+  width: 31%;
+  margin: 0% 1%;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 
   &:hover {
-    border-bottom: 5px solid $primary-color;
-    border-right: 4px solid $primary-color;
     .icofont {
       color: $primary-color;
     }
@@ -20,13 +18,32 @@
     color: $secondary-color;
     margin-bottom: 14px;
   }
-  .description {
+  .feature-title {
+    color: $text-color;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  .feature-description {
+    margin-top: 10px;
     color: $secondary-color;
     width: 100%;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 300;
   }
 }
-@media screen and (max-width: $screen-sm) {
+
+@media screen and (max-width: $screen-lg) {
   .card {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .card {
+    margin-bottom: 5%;
     text-align: center;
+    width: 100%;
   }
 }

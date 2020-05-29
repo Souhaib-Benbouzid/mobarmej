@@ -1,8 +1,17 @@
 @import "./styleGuide/variables.scss";
 
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
@@ -10,7 +19,8 @@ a {
 }
 
 .container {
-  max-width: 95%;
+  max-width: 90%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
 }
@@ -27,6 +37,6 @@ a {
 }
 @media screen and (min-width: $screen-lg) {
   .container {
-    max-width: 1024px;
+    max-width: 75%;
   }
 }

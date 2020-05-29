@@ -9,6 +9,7 @@ import Footer from "./sections/footer/footer.component";
 function App() {
   return (
     <div className="App">
+      <div className="test"></div>
       <Header />
       <Switch>
         <Route exact path="/">

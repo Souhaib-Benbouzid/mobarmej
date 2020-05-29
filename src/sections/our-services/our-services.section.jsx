@@ -1,33 +1,23 @@
 import React from "react";
 
 import "./our-services.styles.scss";
+import ServicesCard from "../../components/services-card/servicesCard.component";
+import { ReactComponent as ServicesLogo } from "../../assets/svg/Classroom-rafiki.svg";
 
 const OurServices = () => {
   return (
-    <div className="our-services border-bottom">
+    <div className="our-services">
       <div className="description col">
         <h1 className="services-title">
-          We have great experience <br />{" "}
+          We have great experience <br />
           <span className="services-emphasis">
             Delivering Full stack services
           </span>
         </h1>
-        <ul className="services-list">
-          <li> Web design</li>
-          <li> Web development</li>
-          <li> android / iOS development</li>
-          <li>Windows Apps</li>
-          <li>Search engine optimization</li>
-          <li>Branding</li>
-          <li>Online marketing</li>
-        </ul>
+        <ServicesCard />
       </div>
       <div className="image col">
-        <img
-          src={require("../../assets/img/dashboard.PNG")}
-          className="img-fluid img-rounded"
-          alt=""
-        />
+        <ServicesLogo className="services-logo" />
       </div>
     </div>
   );

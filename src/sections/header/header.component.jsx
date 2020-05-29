@@ -8,7 +8,7 @@ const Header = ({ navItems }) => {
     isOpen === "" ? setOpen("open") : setOpen("");
   };
   return (
-    <header>
+    <header className="container">
       <a className="logo" href="/">
         Mobarmij.
       </a>
