@@ -6,7 +6,7 @@ import { ReactComponent as ServicesLogo } from "../../assets/svg/Classroom-rafik
 
 const OurServices = () => {
   return (
-    <div className="our-services">
+    <div className="our-services container">
       <div className="description col">
         <h1 className="services-title">
           We have great experience <br />

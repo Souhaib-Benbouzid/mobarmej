@@ -1,0 +1,41 @@
+@import "../../styleGuide/variables.scss";
+.projects-container {
+  flex-direction: column;
+  .projects-title {
+    display: flex;
+    justify-content: space-between;
+    .some-work-title {
+      font-weight: 300;
+    }
+    .projects-catchy-line {
+      color: $secondary-color;
+    }
+  }
+  .some-projects {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .projects-container {
+    .projects-title {
+      justify-content: flex-start;
+      width: 100%;
+      .some-work-title {
+        font-weight: 400;
+      }
+
+      .custom-button {
+        display: none;
+      }
+    }
+    .some-projects {
+      margin: 0px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
