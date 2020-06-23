@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import "./header.styles.scss";
 import { connect } from "react-redux";
+import "../../aos";
+
+import "./header.styles.scss";
 
 const Header = ({ navItems }) => {
   const [isOpen, setOpen] = useState("");
@@ -9,7 +11,7 @@ const Header = ({ navItems }) => {
   };
   return (
     <header className="container">
-      <a className="logo" href="/">
+      <a data-aos="zoom-in-up" className="logo" href="/">
         Mobarmij.
       </a>
       <div className="burger" onClick={navToggle}>
@@ -18,7 +20,7 @@ const Header = ({ navItems }) => {
       <nav className={`nav ${isOpen}`}>
         {navItems.map((navItem, i) => {
           return (
-            <a key={navItem.id} href={navItem.href}>
+            <a data-aos="fade-down" key={navItem.id} href={navItem.href}>
               {navItem.name}
             </a>
           );

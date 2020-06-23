@@ -1,0 +1,24 @@
+@import "../../styleGuide/variables.scss";
+
+.select-option {
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-bottom: 1px solid $secondary-color;
+  background-color: white;
+  color: $secondary-color;
+  font-size: 18px;
+  &:focus {
+    outline: none;
+  }
+  selected {
+    outline: none;
+    &:hover {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -4,7 +4,7 @@ const initialState = {
   navItems: [
     { id: 1, name: "About", href: "/about" },
     { id: 2, name: "Contact", href: "/contact" },
-    { id: 3, name: "Services", href: "/services" },
+    { id: 3, name: "Projects", href: "/projects" },
   ],
 };
 

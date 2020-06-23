@@ -20,6 +20,9 @@ header {
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
+    &:focus {
+      color: $secondary-color;
+    }
   }
 
   .burger {
@@ -29,6 +32,7 @@ header {
   }
 
   .nav {
+    z-index: 100;
     a {
       color: $primary-color;
       min-width: 100px;
@@ -43,6 +47,7 @@ header {
   .toggle-button {
     width: 30px;
     height: 4px;
+    border-radius: 30px;
     background-color: $primary-color;
     position: relative;
     top: 0;

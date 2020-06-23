@@ -5,6 +5,7 @@ import storage from "redux-persist/lib/storage";
 import navReducer from "./navigation/navReducer";
 import featuresReducer from "./features/featuresReducer";
 import servicesReducer from "./ourServices/servicesReducer";
+import projectsReducer from "./projects/projects-reducer";
 
 const persistConfig = {
   key: "root",
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   navReducer,
   featuresReducer,
   servicesReducer,
+  projectsReducer,
 });
 
 export const persistedReducer = persistReducer(persistConfig, rootReducer);

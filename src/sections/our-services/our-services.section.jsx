@@ -1,4 +1,5 @@
 import React from "react";
+import "../../aos";
 
 import "./our-services.styles.scss";
 import ServicesCard from "../../components/services-card/servicesCard.component";
@@ -6,9 +7,13 @@ import { ReactComponent as ServicesLogo } from "../../assets/svg/Classroom-rafik
 
 const OurServices = () => {
   return (
-    <div className="our-services">
+    <div id="services" className="our-services container">
       <div className="description col">
-        <h1 className="services-title">
+        <h1
+          data-aos="fade-right"
+          data-aos-anchor-placement="top-center"
+          className="services-title"
+        >
           We have great experience <br />
           <span className="services-emphasis">
             Delivering Full stack services
@@ -16,7 +21,11 @@ const OurServices = () => {
         </h1>
         <ServicesCard />
       </div>
-      <div className="image col">
+      <div
+        data-aos="zoom-in-left"
+        data-aos-anchor-placement="top-center"
+        className="image col"
+      >
         <ServicesLogo className="services-logo" />
       </div>
     </div>

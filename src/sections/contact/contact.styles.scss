@@ -1,0 +1,58 @@
+@import "../../styleGuide/variables.scss";
+
+.contact {
+  background-color: $blue-color;
+  padding: 4% 0%;
+
+  .contact-cta {
+    color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: 60%;
+    padding-right: 2%;
+    .title {
+      text-transform: capitalize;
+      font-weight: 400;
+      .text-orange {
+        color: #ffb519;
+      }
+    }
+
+    .description {
+      padding: 3% 0%;
+      line-height: 30px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .contact {
+    padding-bottom: 10%;
+    overflow-x: hidden;
+    .contact-cta {
+      padding: 14% 0%;
+      width: 100%;
+    }
+    .shape {
+      top: -2%;
+    }
+  }
+  .contact-form {
+    width: 100% !important;
+    margin: 1% auto;
+  }
+}
+.shape {
+  position: absolute;
+  top: -5%;
+  left: -50%;
+  width: 200%;
+  height: 200px;
+  color: $blue-color;
+  overflow: hidden;
+}

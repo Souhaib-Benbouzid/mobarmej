@@ -1,11 +1,13 @@
+@import "../../styleGuide/variables.scss";
+
 .custom-button {
   margin: 1%;
   width: auto;
   letter-spacing: 0.5px;
-  line-height: 30px;
-  padding: 10px 20px;
+  line-height: 25px;
+  padding: 13px 20px;
   font-size: 18px;
-  background-color: #335eea;
+  background-color: $primary-color;
   color: white;
   text-transform: capitalize;
   border: none;
@@ -13,6 +15,10 @@
   border-radius: 5px;
 
   &:hover {
+    background-color: 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    box-shadow: 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    border-color: 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     background-color: #2352eb;
     box-shadow: 0 10px 50px rgba(166, 209, 237, 0.2);
   }
@@ -23,4 +29,10 @@
   &:hover {
     background-color: #e8ecfa;
   }
+}
+
+.work {
+  width: 130px;
+  display: block;
+  margin: 1% auto 0% auto;
 }
