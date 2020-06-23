@@ -12,7 +12,7 @@ const HomePage = () => {
       <Hero />
       <WhyUs />
       <OurServices />
-      <SomeProjects />
+      <SomeProjects number={4} />
     </React.Fragment>
   );
 };

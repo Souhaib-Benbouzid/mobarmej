@@ -4,8 +4,8 @@
   margin: 1%;
   width: auto;
   letter-spacing: 0.5px;
-  line-height: 30px;
-  padding: 10px 20px;
+  line-height: 25px;
+  padding: 13px 20px;
   font-size: 18px;
   background-color: $primary-color;
   color: white;
@@ -32,16 +32,7 @@
 }
 
 .work {
-  border: 1px solid;
-  border-color: #d9e2ef;
-  color: $primary-color;
-  background-color: $bg-color;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 8px 16px;
-
-  &:hover {
-    color: $bg-color;
-    background-color: $primary-color;
-  }
+  width: 130px;
+  display: block;
+  margin: 1% auto 0% auto;
 }

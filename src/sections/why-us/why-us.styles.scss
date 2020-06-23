@@ -1,10 +1,10 @@
 @import "../../styleGuide/variables.scss";
 .why-us {
-  margin: 20% auto;
+  margin: 20% auto 5% auto;
 }
 
 @media screen and (min-width: $screen-md) {
   .why-us {
-    margin: 5% auto 0% auto;
+    margin: 3% auto 0% auto;
   }
 }

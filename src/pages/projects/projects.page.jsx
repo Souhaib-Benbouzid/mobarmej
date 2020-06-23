@@ -1,8 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import "./projects.styles.scss";
 
-const Projects = () => {
-  return <h1>Projects</h1>;
+import SomeProjects from "../../sections/some-projects/someProjects.section";
+
+const Projects = ({ projects }) => {
+  return (
+    <div className="projects-page">
+      <SomeProjects number={8} />
+    </div>
+  );
 };
 
-export default Projects;
+const mapStateToProps = (state) => ({
+  projects: state.projectsReducer.projects_data,
+});
+export default connect(mapStateToProps)(Projects);

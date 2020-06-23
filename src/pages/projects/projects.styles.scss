@@ -1,0 +1,11 @@
+@import "../../styleGuide/variables.scss";
+
+.projects-page {
+  .projects-container {
+    background-color: $bg-color;
+
+    .custom-button {
+      display: none;
+    }
+  }
+}

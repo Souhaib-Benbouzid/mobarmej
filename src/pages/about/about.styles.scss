@@ -1,0 +1,52 @@
+@import "../../styleGuide/variables.scss";
+
+.about-page {
+  padding: 6% 10% 4% 10%;
+  color: $text-color;
+  .intro {
+    width: 65%;
+    margin: auto;
+    .title {
+      text-align: center;
+      font-size: 45px;
+      font-weight: 400;
+      line-height: 73.2px;
+      margin: 0px 0px 16px;
+    }
+    .description {
+      text-align: center;
+      color: #869ab8;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 33.6px;
+      margin: 0px 0px 3%;
+    }
+  }
+  .about-img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .explain {
+    padding: 3% 0%;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .about-page {
+    padding: 4% 5% 8% 5%;
+    .intro {
+      width: 100%;
+      .title {
+        margin: 0px 0px 16px;
+      }
+      .description {
+        margin: 0px 0px 3%;
+      }
+    }
+  }
+}

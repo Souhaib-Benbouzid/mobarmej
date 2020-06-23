@@ -1,0 +1,9 @@
+@import "../../styleGuide/variables.scss";
+
+.contact-form {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 32px;
+  width: 393px;
+  border-radius: 5px;
+}

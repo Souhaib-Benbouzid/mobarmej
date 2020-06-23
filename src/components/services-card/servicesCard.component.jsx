@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import "../../aos";
 
 import "./servicesCard.styles.scss";
 
@@ -7,7 +8,12 @@ const ServicesCard = ({ services }) => {
   return (
     <ul className="services-list">
       {services.map((service, index) => (
-        <li key={index} className="services-item">
+        <li
+          data-aos="fade-right"
+          data-aos-delay={`${index}00`}
+          key={index}
+          className="services-item"
+        >
           {service}
         </li>
       ))}

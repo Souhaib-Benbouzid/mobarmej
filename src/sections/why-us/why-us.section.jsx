@@ -10,8 +10,8 @@ import FeaturesCard from "../../components/features-card/featuresCard.component"
 const WhyUs = ({ features }) => {
   return (
     <div className="why-us container">
-      {features.map(({ id, ...otherProps }) => (
-        <FeaturesCard key={id} {...otherProps} />
+      {features.map((feature) => (
+        <FeaturesCard key={feature.id} feature={feature} />
       ))}
     </div>
   );
